@@ -12,13 +12,19 @@ const App = () => {
     console.log(todos);
   }, [todos]);
 
+  console.log("Meetraj");
+
   return (
     <div className="TodoWrapper">
       <h1>Get Things Done!!</h1>
       <TodoForm />
       <ul>
         {todos.map((item, key) => {
-          return item.isEditing ? <EditTodoForm item={item}/> : <Todo item={item} />;
+          return item.isEditing ? (
+            <EditTodoForm item={item} />
+          ) : (
+            <Todo item={item} />
+          );
         })}
       </ul>
     </div>
