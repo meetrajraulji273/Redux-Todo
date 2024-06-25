@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import "./App.css";
+import TodoForm from "./components/TodoForm";
+import Todo from "./components/Todo";
+import EditTodoForm from "./components/EditTodoForm";
 
-function App() {
+const App = () => {
+  const todos = useSelector((state) => state.todos.todos);
+
+  useEffect(() => {
+    console.log(todos);
+  }, [todos]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="TodoWrapper">
+      <h1>Get Things Done!!</h1>
+      <TodoForm />
+      <ul>
+        {todos.map((item, key) => {
+          return item.isEditing ? <EditTodoForm item={item}/> : <Todo item={item} />;
+        })}
+      </ul>
     </div>
   );
-}
+};
 
 export default App;
