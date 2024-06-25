@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,33 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+React ReduxTodo App
+This Todo application is built using React, Redux Toolkit, and Font Awesome icons for efficient task management with a stylish interface.
+
+Getting Started
+Clone the repository:
+
+bash
+Copy code
+git clone <repository_url>
+cd react-redux-todo-app
+Install dependencies:
+
+bash
+Copy code
+npm install
+Start the development server:
+
+bash
+Copy code
+npm start
+Open your browser:
+Open http://localhost:3000 to view the app.
+
+Features
+Redux Toolkit: Streamlined state management.
+Font Awesome Icons: Enhance UI with scalable icons.
+Responsive Design: Works well on various devices.
+Start organizing your tasks efficiently today!
+>>>>>>> 5c261943a865d0e24a422d4fd2d9810d82bfce51
